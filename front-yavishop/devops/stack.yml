@@ -1,23 +1,23 @@
 version: '3.8'
 
 services:
-  frontend-yavishop:
+  frontendyavishop:
     image: yavishop:latest
     networks:
       - traefik-public
     deploy:
       labels:
         - "traefik.enable=true"
-        - "traefik.http.routers.yavishop.entrypoints=http"
-        - "traefik.http.routers.yavishop.rule=Host(`yavishop.sistemaagil.net`)"
-        - "traefik.http.middlewares.yavishop-https-redirect.redirectscheme.scheme=https"
-        - "traefik.http.routers.yavishop.middlewares=yavishop-https-redirect"
-        - "traefik.http.routers.yavishop-secure.entrypoints=https"
-        - "traefik.http.routers.yavishop-secure.rule=Host(`yavishop.sistemaagil.net`)"
-        - "traefik.http.routers.yavishop-secure.tls=true"
-        - "traefik.http.routers.yavishop-secure.tls.certresolver=http"
-        - "traefik.http.routers.yavishop-secure.service=yavishop"
-        - "traefik.http.services.yavishop.loadbalancer.server.port=80"
+        - "traefik.http.routers.test-yavishop.entrypoints=http"
+        - "traefik.http.routers.test-yavishop.rule=Host(`test-yavishop.sistemaagil.net`)"
+        - "traefik.http.middlewares.test-yavishop-https-redirect.redirectscheme.scheme=https"
+        - "traefik.http.routers.test-yavishop.middlewares=test-yavishop-https-redirect"
+        - "traefik.http.routers.test-yavishop-secure.entrypoints=https"
+        - "traefik.http.routers.test-yavishop-secure.rule=Host(`test-yavishop.sistemaagil.net`)"
+        - "traefik.http.routers.test-yavishop-secure.tls=true"
+        - "traefik.http.routers.test-yavishop-secure.tls.certresolver=http"
+        - "traefik.http.routers.test-yavishop-secure.service=test-yavishop"
+        - "traefik.http.services.test-yavishop.loadbalancer.server.port=80"
         - "traefik.docker.network=traefik-public"
 
 networks:
