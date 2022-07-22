@@ -1,6 +1,6 @@
 let express = require('express')
-let authRoute = require('./routes/auth')
-let productsRoute = require('./routes/products')
+//let authRoute = require('./routes/auth')
+//let productsRoute = require('./routes/products')
 const cors = require("cors");
 
 let app = express()
