@@ -1,17 +1,25 @@
-let express = require('express')
-//let authRoute = require('./routes/auth')
-//let productsRoute = require('./routes/products')
-const cors = require("cors");
+const {database} = require('./config/conexion');
+const express = require('express');
+const port = (process.env.port || 3000)
 
-let app = express()
+// express
+const app = express()
 
-app.set('port', process.env.PORT || 3000)
-
-app.use(cors());
-app.use(express.urlencoded({ extended: false }))
+//admitir json 
 app.use(express.json())
 
+//configurar
+app.set('port',port)
 
-app.listen(app.get('port'), () => {
-    console.log('Servidor corriendo en el puerto ', app.get('port'))
+//rutas
+app.use('/api',require('./rutas/rutas.producto'))
+
+
+//inicializar express
+app.listen(app.get('port'),(error)=>{
+    if(error)
+    {console.log('error al iniciar el servidor: '+error)}
+    else{
+        console.log('servidor iniciado en el prueto: '+port)
+    }
 })
