@@ -1,13 +1,13 @@
  mysqldb:
         image: mysql
-        container_name: mysql
+        container_name: 8080
         restart: always
-        ports:
-          -8080
+        env_file:
+            - ".env"
         environment:
-            - MYSQL_DATABASE="ys_db"
-            - MYSQL_ROOT_PASSWORD="Sebastian"
-            - MYSQL_USER="userdb"
-            - MYSQL_PASSWORD="userpwd"
+            - MYSQL_DATABASE=ys_db
+            - MYSQL_ROOT_PASSWORD=
+            - MYSQL_USER=admin
+            - MYSQL_PASSWORD=
         volumes:
             - "./data/db/mysql:/var/lib/mysql"
