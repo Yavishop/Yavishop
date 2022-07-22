@@ -4,8 +4,8 @@ services:
   frontendyavishop:
     image: yavishop:latest
     networks:
-      - traefik-public
       - yavishop-networks
+      - traefik-public
     deploy:
       labels:
         - "traefik.enable=true"
@@ -40,8 +40,15 @@ services:
         - "traefik.http.routers.backend-test-secure.service=backend-test"
         - "traefik.http.services.backend-test.loadbalancer.server.port=3000"
         - "traefik.docker.network=traefik-public"
+
+  bd-mysql:
+    imagen:mysql: mysql
+    networks: 
+      - yavishop-networks
+      - traefik-public
+
 networks:
   traefik-public:
     external: true
-  tendencias-networks:
+  yavishop-networks:
     external: true
