@@ -1,11 +1,11 @@
 pipeline {
     agent any
-    stages{
-       stage ('Deploy'){
+    stages {
+       stage ('Despliegue'){
            agent {
-            label: 'integracion'
+            label 'integracion'
            }
-           steps {
+           steps{
                sh 'docker build -f devops/Dockerfile -t yavishop-front:latest .'
                sh 'docker stack deploy -c devops/stack.yml yavishop-na'
            }
