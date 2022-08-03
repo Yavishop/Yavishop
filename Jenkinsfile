@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        PROJEC_NAME = "yavishop-front"
+        PROJEC_NAME = "front-yavishop"
         TAGS = 'sistemaagil'
         HOME = '.'
     }    
@@ -11,9 +11,9 @@ pipeline {
                 label 'integracion'
             }
             steps{
-                sh 'docker build -f devops/Dockerfile -t yavishop-front:latest .'
+                sh 'docker build -f front-yavishop/devops/Dockerfile -t yavishop-front:latest .'
                 sh 'docker stack rm yavishop-na'
-                sh 'docker stack deploy -c devops/stack.yml yavishop-na'
+                sh 'docker stack deploy -c front-yavishop/devops/stack.yml yavishop-na'
             }
         }
     }
