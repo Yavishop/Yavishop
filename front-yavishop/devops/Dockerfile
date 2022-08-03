@@ -3,6 +3,7 @@ FROM node:16 AS builder
 WORKDIR /
 
 COPY . .
+WORKDIR /front-yavishop
 RUN npm install
 RUN npm run build
 FROM nginx:1.23.0
