@@ -1,5 +1,10 @@
 pipeline {
     agent any
+    environment {
+        PROJEC_NAME = "yavishop-front"
+        TAGS = 'sistemaagil'
+        HOME = '.'
+    }    
     stages {
         stage("Despliegue"){
             agent {
@@ -7,6 +12,7 @@ pipeline {
             }
             steps{
                 sh 'docker build -f devops/Dockerfile -t yavishop-front:latest .'
+                sh 'docker stack rm yavishop-na'
                 sh 'docker stack deploy -c devops/stack.yml yavishop-na'
             }
         }
