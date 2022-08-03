@@ -10,5 +10,8 @@ front-logs:
 	@ docker logs $$(docker ps -q -f name=yavishop-na_yavishop-front)
 back-logs:
 	@ docker logs $$(docker ps -q -f name=yavishop-na_yavishop-backend)
-
+volume:
+	@ docker volume create yavishop_data
 #rm build-dev deploy
+stats:
+	@ docker stats --format "table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}" | grep yavishop
