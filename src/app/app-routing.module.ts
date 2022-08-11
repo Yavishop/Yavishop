@@ -1,20 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { InicioComponent } from './componente/inicio/inicio.component';
-import { AgregarComponent } from './componente/producto/agregar/agregar.component';
-import { DetalleComponent } from './componente/producto/detalle/detalle.component';
-import { EditarComponent } from './componente/producto/editar/editar.component';
-import { ListaComponent } from './componente/producto/lista/lista.component';
+import { HomeComponent } from './components/home/home.component';
+import { TutorialsListComponent } from './components/tutorials-list/tutorials-list.component';
+import { TutorialDetailsComponent } from './components/tutorial-details/tutorial-details.component';
+import { AddTutorialComponent } from './components/add-tutorial/add-tutorial.component';
+import { ProductoListComponent  } from './components/producto-list/producto-list.component';
+import { ProductoDetailsComponent } from './components/producto-details/producto-details.component';
+import { AddProductoComponent } from './components/add-producto/add-producto.component';
 
-const routes: Routes = 
-[
-{path:'',redirectTo:'/inicio', pathMatch:'full'},
-{path:'inicio' , component: InicioComponent},
-{path:'producto/add', component:AgregarComponent},
-{path:'producto/detalle:id', component:DetalleComponent},
-{path:'producto/lista:id', component:ListaComponent},
-{path:'producto/editar:id', component:EditarComponent},
 
+const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'tutorials', component: TutorialsListComponent },
+  { path: 'tutorials/:id', component: TutorialDetailsComponent },
+  { path: 'addtutorials', component: AddTutorialComponent },
+  { path: 'productos', component: ProductoListComponent },
+  { path: 'productos/:id', component: ProductoDetailsComponent },
+  { path: 'addproductos', component: AddProductoComponent }
 ];
 
 @NgModule({

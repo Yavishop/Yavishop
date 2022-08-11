@@ -1,32 +1,34 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ListaComponent } from './componente/producto/lista/lista.component';
-import { DetalleComponent } from './componente/producto/detalle/detalle.component';
-import { AgregarComponent } from './componente/producto/agregar/agregar.component';
-import { LoginComponent } from './componente/login/login.component';
-import { InicioComponent } from './componente/inicio/inicio.component';
-import { ListapedidosComponent } from './componente/pedidos/listapedidos/listapedidos.component';
-import { DetallepedidosComponent } from './componente/pedidos/detallepedidos/detallepedidos.component';
-import { EditarComponent } from './componente/producto/editar/editar.component';
+import { AddTutorialComponent } from './components/add-tutorial/add-tutorial.component';
+import { TutorialDetailsComponent } from './components/tutorial-details/tutorial-details.component';
+import { TutorialsListComponent } from './components/tutorials-list/tutorials-list.component';
+import { AddProductoComponent } from './components/add-producto/add-producto.component';
+import { ProductoDetailsComponent } from './components/producto-details/producto-details.component';
+import { ProductoListComponent } from './components/producto-list/producto-list.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListaComponent,
-    DetalleComponent,
-    AgregarComponent,
-    LoginComponent,
-    InicioComponent,
-    ListapedidosComponent,
-    DetallepedidosComponent,
-    EditarComponent
+    AddTutorialComponent,
+    TutorialDetailsComponent,
+    TutorialsListComponent,
+    AddProductoComponent,
+    ProductoDetailsComponent,
+    ProductoListComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

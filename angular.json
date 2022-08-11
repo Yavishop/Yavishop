@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "front-yavishop": {
+    "angular-14-crud-example": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "docs",
+            "outputPath": "dist/angular-14-crud-example",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "front-yavishop:build:production"
+              "browserTarget": "angular-14-crud-example:build:production"
             },
             "development": {
-              "browserTarget": "front-yavishop:build:development"
+              "browserTarget": "angular-14-crud-example:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "front-yavishop:build"
+            "browserTarget": "angular-14-crud-example:build"
           }
         },
         "test": {
@@ -99,6 +99,6 @@
     }
   },
   "cli": {
-    "analytics": "a73d30b8-b088-4f26-9d27-b5db31622802"
+    "analytics": "9f4c49cd-679b-46ad-be3d-aa66c6dff4aa"
   }
 }
