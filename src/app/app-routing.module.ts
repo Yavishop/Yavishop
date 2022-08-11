@@ -7,21 +7,26 @@ import { AddTutorialComponent } from './components/add-tutorial/add-tutorial.com
 import { ProductoListComponent  } from './components/producto-list/producto-list.component';
 import { ProductoDetailsComponent } from './components/producto-details/producto-details.component';
 import { AddProductoComponent } from './components/add-producto/add-producto.component';
+import { AddUsuarioComponent } from './components/add-usuario/add-usuario.component';
+import { UsuarioListComponent } from './components/usuario-list/usuario-list.component';
+import { UsuarioDetailsComponent } from './components/usuario-details/usuario-details.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
+  //ejemplo
   { path: 'tutorials', component: TutorialsListComponent },
   { path: 'tutorials/:id', component: TutorialDetailsComponent },
   { path: 'addtutorials', component: AddTutorialComponent },
+ //productos
   { path: 'productos', component: ProductoListComponent },
   { path: 'productos/:id', component: ProductoDetailsComponent },
   { path: 'addproductos', component: AddProductoComponent },
 // usuarios
-// { path: 'usuarios', component: UsuarioListComponent },
-// { path: 'usuarios/:id', component: UsuarioDetailsComponent },
-// { path: 'addusuarios', component: AddUsuarioComponent }
+ { path: 'usuarios', component: UsuarioListComponent },
+ { path: 'usuarios/:id', component: UsuarioDetailsComponent },
+{ path: 'addusuarios', component: AddUsuarioComponent }
 ];
 
 @NgModule({
