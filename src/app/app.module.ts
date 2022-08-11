@@ -12,6 +12,9 @@ import { AddProductoComponent } from './components/add-producto/add-producto.com
 import { ProductoDetailsComponent } from './components/producto-details/producto-details.component';
 import { ProductoListComponent } from './components/producto-list/producto-list.component';
 import { HomeComponent } from './components/home/home.component';
+import { AddUsuarioComponent } from './components/add-usuario/add-usuario.component';
+import { UsuarioDetailsComponent } from './components/usuario-details/usuario-details.component';
+import { UsuarioListComponent } from './components/usuario-list/usuario-list.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { HomeComponent } from './components/home/home.component';
     AddProductoComponent,
     ProductoDetailsComponent,
     ProductoListComponent,
-    HomeComponent
+    HomeComponent,
+    AddUsuarioComponent,
+    UsuarioDetailsComponent,
+    UsuarioListComponent
   ],
   imports: [
     BrowserModule,

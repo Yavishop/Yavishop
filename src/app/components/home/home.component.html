@@ -1,92 +1,94 @@
-<h1>Bienvenidos a Yavishop</h1>
-<!--
-<script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
 
-<body class="fondo">
+<head>
+  <link rel="stylesheet" href="./home.component.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
 
-    <div class="container">
-        <div class="forms-container">
-            <div class="signin-signup">
+</head>
 
-                <form action="php/login.php" method="POST" class="sign-in-form">
-                    <img class="img-fluid" src="img/logo.png">
-                    <h2 class="title">Sign in</h2>
-                    <div class="input-field">
-                        <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Username" name="email" />
-                    </div>
-                    <div class="input-field">
-                        <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password" name="password" />
-                    </div>
-                    <input type="submit" value="INGRESAR" class="btn solid" />
-                </form>
+  <div class="container">
+    <div class="forms-container">
+      <div class="signin-signup">
 
-                <form action="php/registrar.php" method="POST" class="sign-up-form">
-                    <img class="img-fluid" src="img/logo.png">
-                    <div class="input-field">
-                        <i class="fas fa-id-card"></i>
-                        <input type="text" placeholder="Cedula" name="cedula" />
-                    </div>
-                    <div class="input-field">
-                        <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Username" name="user" />
-                    </div>
-                    <div class="input-field">
-                        <i class="fas fa-envelope"></i>
-                        <input type="email" placeholder="Email" name="email" />
-                    </div>
-                    <div class="input-field">
-                        <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password" name="password" />
-                    </div>
-                    <input type="submit" class="btn" value="REGISTRARSE" />
-                </form>
-            </div>
-        </div>
+        <form action="php/login.php" method="POST" class="sign-in-form">
+          <img class="img-fluid" img src="https://eva.yavirac.edu.ec/pluginfile.php/1/theme_lambda/logo/1656087083/nuevos%20logo%20YAVIRAC-01.png" >
+          <h2 class="title">YAVISHOP</h2>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Username" name="email" />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password" name="password" />
+          </div>
+          <input type="submit" value="INGRESAR" class="btn solid" />
+        </form>
 
-        <div class="panels-container">
-            <div class="panel left-panel">
-                <div class="content">
-                    <h3>Eres nuevo?</h3>
-                    <p>
-                        Registrate para acceder a los servicios institucionales.
-                    </p>
-                    <button class="btn transparent" id="sign-up-btn">
-                        REGISTRARSE
-                    </button>
-                </div>
-                <img src="img/register.svg" class="image" alt="" />
-            </div>
-            <div class="panel right-panel">
-                <div class="content">
-                    <h3>Eres uno de nosotros?</h3>
-                    <p>
-                        Ingresa con tu email y password para utilizar los servicios.
-                    </p>
-                    <button class="btn transparent" id="sign-in-btn">
-                        INGRESAR
-                    </button>
-                </div>
-                <img src="img/register.svg" class="image" alt="" />
-            </div>
-        </div>
+        <form action="php/registrar.php" method="POST" class="sign-up-form">
+          <img class="img-fluid" src="img/logo.png">
+          <div class="input-field">
+            <i class="fas fa-id-card"></i>
+            <input type="text" placeholder="Cedula" name="cedula" />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Username" name="user" />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-envelope"></i>
+            <input type="email" placeholder="Email" name="email" />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password" name="password" />
+          </div>
+          <input type="submit" class="btn" value="REGISTRARSE" />
+        </form>
+      </div>
     </div>
 
-    <script>
-        const sign_in_btn = document.querySelector("#sign-in-btn");
-        const sign_up_btn = document.querySelector("#sign-up-btn");
-        const container = document.querySelector(".container");
+    <div class="panels-container">
+      <div class="panel left-panel">
+        <div class="content">
+          <h3>Eres nuevo?</h3>
+          <p>
+            Registrate para acceder a los servicios institucionales.
+          </p>
+          <button class="btn transparent" id="sign-up-btn">
+            REGISTRARSE
+          </button>
+        </div>
+        <img src="img/register.svg" class="image" alt="" />
+      </div>
+      <div class="panel right-panel">
+        <div class="content">
+          <h3>Eres uno de nosotros?</h3>
+          <p>
+            Ingresa con tu email y password para utilizar los servicios.
+          </p>
+          <button class="btn transparent" id="sign-in-btn">
+            INGRESAR
+          </button>
+        </div>
+        <img src="img/register.svg" class="image" alt="" />
+      </div>
+    </div>
+         
 
-        sign_up_btn.addEventListener("click", () => {
-            container.classList.add("sign-up-mode");
-        });
+  <script>
+    const sign_in_btn = document.querySelector("#sign-in-btn");
+    const sign_up_btn = document.querySelector("#sign-up-btn");
+    const container = document.querySelector(".container");
 
-        sign_in_btn.addEventListener("click", () => {
-            container.classList.remove("sign-up-mode");
-        });
+    sign_up_btn.addEventListener("click", () => {
+      container.classList.add("sign-up-mode");
+    });
 
-    </script>
+    sign_in_btn.addEventListener("click", () => {
+      container.classList.remove("sign-up-mode");
+    });
 
-</body>
--->
+  </script>
+
+
+
