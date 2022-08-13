@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { UsuarioService } from '../../services/usuario.service';
+import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-cont-usuario',
+  templateUrl: './cont-usuario.component.html',
+  styleUrls: ['./cont-usuario.component.css']
 })
-export class HomeComponent implements OnInit {
+export class ContUsuarioComponent implements OnInit {
   content?: string;
 
-  constructor(private userioService: UsuarioService) { }
+  constructor(private usuarioService: UsuarioService) { }
 
   ngOnInit(): void {
-    this.userioService.getContenidoPublico().subscribe({
+    this.usuarioService.getUserTablero().subscribe({
       next: data => {
         this.content = data;
       },

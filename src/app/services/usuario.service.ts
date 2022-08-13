@@ -4,10 +4,12 @@ import { Observable } from 'rxjs';
 import { Usuario } from '../models/usuario.model';
 
 const baseUrl = 'http://localhost:8080/api/usuarios';
+const API_URL = 'http://localhost:8080/api/test/';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
+
 export class UsuarioService {
 
   constructor(private http: HttpClient) { }
@@ -32,5 +34,21 @@ export class UsuarioService {
   }
   findByNombre(nombre: any): Observable<Usuario[]> {
     return this.http.get<Usuario[]>(`${baseUrl}?nombre=${nombre}`);
+  }
+
+  getContenidoPublico(): Observable<any> {
+    return this.http.get(API_URL + 'all', { responseType: 'text' });
+  }
+
+  getUserTablero(): Observable<any> {
+    return this.http.get(API_URL + 'user', { responseType: 'text' });
+  }
+  
+  getModeradorTablero(): Observable<any> {
+    return this.http.get(API_URL + 'mod', { responseType: 'text' });
+  }
+
+  getAdminTablero(): Observable<any> {
+    return this.http.get(API_URL + 'admin', { responseType: 'text' });
   }
 }

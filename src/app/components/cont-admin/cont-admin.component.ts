@@ -1,18 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { UsuarioService } from '../../services/usuario.service';
+import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-cont-admin',
+  templateUrl: './cont-admin.component.html',
+  styleUrls: ['./cont-admin.component.css']
 })
-export class HomeComponent implements OnInit {
-  content?: string;
+export class ContAdminComponent implements OnInit {
 
-  constructor(private userioService: UsuarioService) { }
+  content?: string
+
+  constructor(private usuarioService: UsuarioService) { }
 
   ngOnInit(): void {
-    this.userioService.getContenidoPublico().subscribe({
+    this.usuarioService.getAdminTablero().subscribe({
       next: data => {
         this.content = data;
       },
@@ -30,4 +31,5 @@ export class HomeComponent implements OnInit {
       }
     });
   }
+
 }
