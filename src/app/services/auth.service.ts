@@ -16,7 +16,7 @@ export class AuthService {
 
   login(username: string, password: string): Observable<any> {
     return this.http.post(
-      AUTH_API + 'registro',
+      AUTH_API + 'login',
       {
         username,
         password,
@@ -27,7 +27,7 @@ export class AuthService {
 
   register(username: string, email: string, password: string): Observable<any> {
     return this.http.post(
-      AUTH_API + 'login',
+      AUTH_API + 'registro',
       {
         username,
         email,
