@@ -1,1 +1,29 @@
-<p>usuario-list works!</p>
+<app-navbar></app-navbar>
+
+<div class="list row mt-5">
+    <div class="col-md-8">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Buscar por Nombre" [(ngModel)]="nombre" />
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" (click)="buscarNombre()">
+                    Buscar
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 mt-3">
+        <h4 class="mb-3">Lista Usuarios</h4>
+        <ul class="list-group mb-3">
+            <li class="list-group-item" *ngFor="let usuarios of usuario; let i = index"
+                [class.active]="i == currentIndex" (click)="setUsuarioActivo(usuarios, i)">
+                {{ usuarios.nombre }}
+            </li>
+        </ul>
+        <button class="btn btn-sm btn-danger" (click)="removerAllUsuarios()">
+            Remover todo
+        </button>
+    </div>
+    <div class="col-md-6">
+        <app-usuario-details [viewMode]="true" [currentUsuario]="currentUsuario"></app-usuario-details>
+    </div>
+</div>

@@ -6,5 +6,4 @@ export class Usuario {
     correo?: string;
     password?: string;
     estado?: boolean;
-  usuarioId: any;
 }
