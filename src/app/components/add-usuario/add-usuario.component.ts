@@ -15,8 +15,7 @@ export class AddUsuarioComponent  {
     cedula: '',
     correo: '',
     password: '',
-    estado: false,
-    usuarioId: undefined
+    estado: false
   };
   submitted = false;
 
@@ -48,8 +47,7 @@ export class AddUsuarioComponent  {
       cedula: '',
       correo: '',
       password: '',
-      estado: false,
-      usuarioId: undefined
+      estado: false
     };
   }
 
