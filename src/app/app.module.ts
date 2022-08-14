@@ -20,6 +20,7 @@ import { ContModeradorComponent } from './components/cont-moderador/cont-moderad
 import { RegistroComponent } from './components/registro/registro.component';
 
 import { httpInterceptorProviders } from './helpers/http.interceptor';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { httpInterceptorProviders } from './helpers/http.interceptor';
     ContAdminComponent,
     ContUsuarioComponent,
     ContModeradorComponent,
-    RegistroComponent
+    RegistroComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
