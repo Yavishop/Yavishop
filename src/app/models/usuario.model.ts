@@ -1,10 +1,10 @@
 export class Usuario {
     id?: any;
+    username?: string;
     nombre?: string;
     apellido?: string;
     cedula?: string;
-    correo?: string;
+    email?: string;
     password?: string;
     estado?: boolean;
-  usuarioId: any;
 }
