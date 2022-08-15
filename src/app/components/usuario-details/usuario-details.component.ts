@@ -12,10 +12,11 @@ export class UsuarioDetailsComponent implements OnInit {
 
   @Input() viewMode = false;
   @Input() currentUsuario: Usuario = {
+    username: '',
     nombre: '',
     apellido: '',
     cedula: '',
-    correo: '',
+    email: '',
     password: '',
     estado: false
   };
@@ -43,10 +44,11 @@ export class UsuarioDetailsComponent implements OnInit {
   }
   updateEstado(status: boolean): void {
     const data = {
+      username: this.currentUsuario.username,
       nombre: this.currentUsuario.nombre,
       apellido: this.currentUsuario.apellido,
       cedula: this.currentUsuario.cedula,
-      correo: this.currentUsuario.correo,
+      email: this.currentUsuario.email,
       password: this.currentUsuario.password,
       estado: status
     };

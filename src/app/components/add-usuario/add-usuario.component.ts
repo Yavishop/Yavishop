@@ -10,10 +10,11 @@ import { UsuarioService } from 'src/app/services/usuario.service';
 export class AddUsuarioComponent  {
 
   usuario: Usuario = {
+    username:'',   
     nombre: '',
     apellido: '',
     cedula: '',
-    correo: '',
+    email: '',
     password: '',
     estado: false
   };
@@ -23,10 +24,11 @@ export class AddUsuarioComponent  {
 
   saveUsuario(): void {
     const data = {
+      username: this.usuario.username,
       nombre: this.usuario.nombre,
       apellido: this.usuario.apellido,
       cedula: this.usuario.cedula,
-      correo: this.usuario.correo,
+      correo: this.usuario.email,
       password: this.usuario.password,
 
     };
@@ -42,10 +44,11 @@ export class AddUsuarioComponent  {
   newUsuario(): void {
     this.submitted = false;
     this.usuario = {
+      username:'',  
       nombre: '',
       apellido: '',
       cedula: '',
-      correo: '',
+      email: '',
       password: '',
       estado: false
     };

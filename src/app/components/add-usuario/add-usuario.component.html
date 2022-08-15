@@ -1,14 +1,14 @@
-<app-navbar></app-navbar>
+<div class="container mt-3">
   <div class="submit-form">
     <div *ngIf="!submitted">
       <h3> AGREGAR UN USUARIO </h3>
       <div class="form-group">
-        <label for="nombre" >Nombre</label>
-        <input 
-         type="text"
-         class="form-control" 
-         id="nombre" 
-         required [(ngModel)]="usuario.nombre" name="nombre" />
+        <label for="nombre">Username</label>
+        <input type="text" class="form-control" id="username" required [(ngModel)]="usuario.username" name="username" />
+      </div>
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" class="form-control" id="nombre" required [(ngModel)]="usuario.nombre" name="nombre" />
       </div>
       <div class="form-group ">
         <label for="apellido">apellido</label>
@@ -20,7 +20,7 @@
       </div>
       <div class="form-group">
         <label for="correo">Correo</label>
-        <input class="form-control " id="correo" required [(ngModel)]="usuario.correo" name="correo" />
+        <input class="form-control " id="correo" required [(ngModel)]="usuario.email" name="correo" />
       </div>
       <div class="form-group ">
         <label for="password">Password</label>
@@ -33,3 +33,4 @@
       <button class="btn btn-success" (click)="newUsuario()">Agregar</button>
     </div>
   </div>
+</div>

@@ -45,7 +45,7 @@ export class UsuarioService {
   }
   
   getModeradorTablero(): Observable<any> {
-    return this.http.get(API_URL + 'mod', { responseType: 'text' });
+    return this.http.get(API_URL + 'moderador', { responseType: 'text' });
   }
 
   getAdminTablero(): Observable<any> {
