@@ -70,7 +70,7 @@
                 {{ currentProducto.estado ? "Activo" : "Inactivo" }}
             </div>
         </form>
-        <button type="submit" class="btn btn-success mb-2" routerLink="/productos" >
+        <button *ngIf="!showAdminBoard" type="submit" class="btn btn-success mb-2" routerLink="/productos" >
             Regresar ala Lista
         </button>
         <div *ngIf="showAdminBoard">

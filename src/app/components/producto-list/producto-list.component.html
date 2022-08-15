@@ -31,32 +31,34 @@
         </div>
     </div>
     <div *ngIf="isLoggedIn">
-        <h1>contenido de usuario</h1>
-        <div class="list row mt-5">
-            <div class="col-md-8">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Buscar por Nombre" [(ngModel)]="nombre" />
-                    <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button" (click)="buscarNombre()">
-                            Buscar
-                        </button>
+        <div *ngIf="!showAdminBoard">
+            <h1>contenido de usuario</h1>
+            <div class="list row mt-5" >
+                <div class="col-md-8">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Buscar por Nombre" [(ngModel)]="nombre" />
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" (click)="buscarNombre()">
+                                Buscar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" *ngFor="let productos of producto; let i = index">
+                    <div class="col-4 m-5">
+                        <div class="card text-center" style="width: 18rem;">
+                            <img class="card-img-top" style="width: 286px; height:180px ;"
+                                src="{{productos.imagen}}"
+                                alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ productos.nombre }}</h5>
+                                <a class="btn btn-outline-warning" routerLink="/productos/{{ productos.id }}">Ver
+                                    Detalle</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row" *ngFor="let productos of producto; let i = index">                
-                <div class="col-4 m-5">
-                  <div class="card text-center" style="width: 18rem;">
-                    <img class="card-img-top" style="width: 286px; height:180px ;"
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6IbcXqJIzFtSx4pm6Dbe0ILEaBx7_xjf0yw&usqp=CAU"
-                      alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title">{{ productos.nombre }}</h5>
-                      <a class="btn btn-outline-warning" routerLink="/productos/{{ productos.id }}">Ver Detalle</a>
-                    </div>
-                  </div>
-                </div>
-            </div>                     
-
         </div>
     </div>
 </div>
