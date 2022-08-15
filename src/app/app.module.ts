@@ -21,6 +21,7 @@ import { RegistroComponent } from './components/registro/registro.component';
 
 import { httpInterceptorProviders } from './helpers/http.interceptor';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { PedidosComponent } from './components/pedidos/pedidos.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     ContUsuarioComponent,
     ContModeradorComponent,
     RegistroComponent,
-    NavbarComponent
+    NavbarComponent,
+    PedidosComponent
   ],
   imports: [
     BrowserModule,
