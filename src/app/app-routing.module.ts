@@ -10,9 +10,6 @@ import { UsuarioDetailsComponent } from './components/usuario-details/usuario-de
 import { LoginComponent } from './components/login/login.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { RegistroComponent } from './components/registro/registro.component';
-import { ContUsuarioComponent } from './components/cont-usuario/cont-usuario.component';
-import { ContAdminComponent } from './components/cont-admin/cont-admin.component';
-import { ContModeradorComponent } from './components/cont-moderador/cont-moderador.component';
 
 
 
@@ -30,10 +27,7 @@ const routes: Routes = [
   { path: 'addusuarios', component: AddUsuarioComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegistroComponent },
-  { path: 'profile', component: PerfilComponent },
-  { path: 'cont-user', component: ContUsuarioComponent },
-  { path: 'cont-admin', component: ContAdminComponent },
-  { path: 'cont-mod', component: ContModeradorComponent }
+  { path: 'profile', component: PerfilComponent }
 ];
 
 @NgModule({

@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Producto } from 'src/app/models/producto.model';
 import { ProductoService } from 'src/app/services/producto.service';
+import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
   selector: 'app-producto-details',
@@ -20,9 +21,16 @@ export class ProductoDetailsComponent implements OnInit {
     estado: false
   };
   mensaje = '';
+
+  private roles: string[] = [];
+  isLoggedIn = false;
+  showAdminBoard = false;
+  showModeratorBoard = false;
+
   constructor(
     private productoService: ProductoService,
     private route: ActivatedRoute,
+    private storageService: StorageService,
     private router: Router) { }
 
   ngOnInit(): void {
@@ -30,6 +38,17 @@ export class ProductoDetailsComponent implements OnInit {
       this.mensaje = '';
       this.getProducto(this.route.snapshot.params["id"]);
     }
+
+    this.isLoggedIn = this.storageService.isLoggedIn();
+
+    if (this.isLoggedIn) {
+      const user = this.storageService.getUser();
+      this.roles = user.roles;
+
+      this.showAdminBoard = this.roles.includes('ROLE_ADMIN');
+      this.showModeratorBoard = this.roles.includes('ROLE_MODERATOR');
+    }
+    
   }
   getProducto(id: string): void {
     this.productoService.get(id)

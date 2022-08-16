@@ -8,6 +8,7 @@ import { UsuarioService } from 'src/app/services/usuario.service';
   styleUrls: ['./usuario-list.component.css']
 })
 export class UsuarioListComponent implements OnInit {
+
   usuario?: Usuario[];
   currentUsuario: Usuario = { };
   currentIndex = -1;

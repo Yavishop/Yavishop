@@ -14,13 +14,9 @@ import { UsuarioDetailsComponent } from './components/usuario-details/usuario-de
 import { UsuarioListComponent } from './components/usuario-list/usuario-list.component';
 import { LoginComponent } from './components/login/login.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
-import { ContAdminComponent } from './components/cont-admin/cont-admin.component';
-import { ContUsuarioComponent } from './components/cont-usuario/cont-usuario.component';
-import { ContModeradorComponent } from './components/cont-moderador/cont-moderador.component';
 import { RegistroComponent } from './components/registro/registro.component';
 
 import { httpInterceptorProviders } from './helpers/http.interceptor';
-import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -34,11 +30,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     UsuarioListComponent,
     LoginComponent,
     PerfilComponent,
-    ContAdminComponent,
-    ContUsuarioComponent,
-    ContModeradorComponent,
-    RegistroComponent,
-    NavbarComponent
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
