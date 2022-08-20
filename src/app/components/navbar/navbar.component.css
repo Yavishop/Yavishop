@@ -6,3 +6,11 @@ nav{
   a{
     margin: 15px;
   }
+  .nav-item{
+    font-size: 28px;
+font-family: 'Times New Roman', Times, serif;  }
+.logo{
+  border-radius: 50%;
+    box-shadow: 0 0 10px 1px rgba(30, 0, 255, 0.5);
+  
+}

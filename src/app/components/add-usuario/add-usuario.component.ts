@@ -13,7 +13,7 @@ export class AddUsuarioComponent  {
     nombre: '',
     apellido: '',
     cedula: '',
-    correo: '',
+    email: '',
     password: '',
     estado: false
   };
@@ -26,7 +26,7 @@ export class AddUsuarioComponent  {
       nombre: this.usuario.nombre,
       apellido: this.usuario.apellido,
       cedula: this.usuario.cedula,
-      correo: this.usuario.correo,
+      email: this.usuario.email,
       password: this.usuario.password,
 
     };
@@ -45,7 +45,7 @@ export class AddUsuarioComponent  {
       nombre: '',
       apellido: '',
       cedula: '',
-      correo: '',
+      email: '',
       password: '',
       estado: false
     };

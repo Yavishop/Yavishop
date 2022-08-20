@@ -3,7 +3,7 @@ export class Usuario {
     nombre?: string;
     apellido?: string;
     cedula?: string;
-    correo?: string;
+    email?: string;
     password?: string;
     estado?: boolean;
 }

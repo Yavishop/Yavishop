@@ -1,9 +1,12 @@
 <app-navbar></app-navbar>
+<BR>
+<div class="capa-padre">
+  <div class="capa-hijo">
   <div class="submit-form">
     <div *ngIf="!submitted">
       <h3> AGREGAR UN USUARIO </h3>
       <div class="form-group">
-        <label for="nombre" >Nombre</label>
+        <label for="nombre" >NOMBRE:</label>
         <input 
          type="text"
          class="form-control" 
@@ -11,21 +14,21 @@
          required [(ngModel)]="usuario.nombre" name="nombre" />
       </div>
       <div class="form-group ">
-        <label for="apellido">apellido</label>
+        <label for="apellido">APELLIDO:</label>
         <input class="form-control" id="apellido" required [(ngModel)]="usuario.apellido" name="apellido" />
       </div>
       <div class="form-group">
-        <label for="cedula">Cedula</label>
+        <label for="cedula">CEDULA:</label>
         <input class="form-control" id="cedula" required [(ngModel)]="usuario.cedula" name="cedula" />
       </div>
       <div class="form-group">
-        <label for="correo">Correo</label>
-        <input class="form-control " id="correo" required [(ngModel)]="usuario.correo" name="correo" />
+        <label for="email">EMAIL:</label>
+        <input class="form-control " id="email" required [(ngModel)]="usuario.email" name="email" />
       </div>
-      <div class="form-group ">
+      <!-- <div class="form-group ">
         <label for="password">Password</label>
         <input class="form-control" id="password" required [(ngModel)]="usuario.password" name="password" />
-      </div>
+      </div> -->
       <button (click)="saveUsuario()" class="btn btn-success">Enviar</button>
     </div>
     <div *ngIf="submitted">
@@ -33,3 +36,7 @@
       <button class="btn btn-success" (click)="newUsuario()">Agregar</button>
     </div>
   </div>
+</div>
+</div>
+  <br>
+  <app-fotter></app-fotter>

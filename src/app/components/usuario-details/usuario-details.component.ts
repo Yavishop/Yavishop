@@ -15,7 +15,7 @@ export class UsuarioDetailsComponent implements OnInit {
     nombre: '',
     apellido: '',
     cedula: '',
-    correo: '',
+    email: '',
     password: '',
     estado: false
   };
@@ -46,7 +46,7 @@ export class UsuarioDetailsComponent implements OnInit {
       nombre: this.currentUsuario.nombre,
       apellido: this.currentUsuario.apellido,
       cedula: this.currentUsuario.cedula,
-      correo: this.currentUsuario.correo,
+      email: this.currentUsuario.email,
       password: this.currentUsuario.password,
       estado: status
     };
@@ -56,7 +56,7 @@ export class UsuarioDetailsComponent implements OnInit {
         next: (res) => {
           console.log(res);
           this.currentUsuario.estado = status;
-          this.mensaje = res.message ? res.message : '¡El estado se actualizó con éxito!';
+          this.mensaje = res.message ? res.message : '¡El estado del usuario se actualizó con éxito!';
         },
         error: (e) => console.error(e)
       });
@@ -67,7 +67,7 @@ export class UsuarioDetailsComponent implements OnInit {
       .subscribe({
         next: (res) => {
           console.log(res);
-          this.mensaje = res.message ? res.message : '¡Este tutorial se actualizó con éxito!';
+          this.mensaje = res.message ? res.message : '¡El Usuario seleccionado  se actualizó con éxito!';
         },
         error: (e) => console.error(e)
       });

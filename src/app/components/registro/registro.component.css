@@ -6,10 +6,12 @@ label {
   .card-container.card {
     max-width: 400px !important;
     padding: 40px 40px;
+    border-radius: 75px;
   }
   
   .card {
-    background-color: #f7f7f7;
+    text-align: center;
+    background: -webkit-radial-gradient(-30% 70%, rgb(235, 235, 235) 10%, #17A2B8 80%);     min-height: 467px;
     padding: 20px 25px 30px;
     margin: 0 auto 25px;
     margin-top: 50px;
@@ -22,8 +24,8 @@ label {
   }
   
   .profile-img-card {
-    width: 96px;
-    height: 96px;
+    width: 196px;
+    height: 196px;
     margin: 0 auto 10px;
     display: block;
     -moz-border-radius: 50%;

@@ -1,7 +1,6 @@
-
 <div *ngIf="viewMode; else editable">
     <div *ngIf="currentProducto.id">
-        <h4>Producto</h4>
+        <h4>Datos del Producto</h4>
         <div>
             <label><strong>Nombre:</strong></label> {{ currentProducto.nombre }}
         </div>
@@ -34,8 +33,11 @@
     </div>
 </div>
 <ng-template #editable>
+    <app-navbar></app-navbar>
+    <div class="capa-padre">
+        <div class="capa-hijo">
     <div *ngIf="currentProducto.id" class="edit-form">
-        <h4>Producto</h4>
+        <h4>Gestionar Productos</h4>
         <form>
             <div class="form-group mb-3">
                 <label for="nombre" class="mb-2">Nombre</label>
@@ -86,8 +88,12 @@
         </button>
         <p>{{ mensaje }}</p>
     </div>
+</div>
+</div>
     <div *ngIf="!currentProducto.id">
         <br />
         <p>No se puede acceder a este Producto...</p>
     </div>
+    <app-fotter></app-fotter>
 </ng-template>
+<br>

@@ -68,7 +68,7 @@ export class ProductoDetailsComponent implements OnInit {
       .subscribe({
         next: (res) => {
           console.log(res);
-          this.mensaje = res.message ? res.message : '¡Este tutorial se actualizó con éxito!';
+          this.mensaje = res.message ? res.message : '¡Este producto  se actualizó con éxito!';
         },
         error: (e) => console.error(e)
       });
